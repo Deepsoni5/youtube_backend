@@ -1,0 +1,6 @@
+-> empty folders cant be pushed in github so we need to create .gitkeep and push.
+
+-> .env file for security purpose and pushing imp variable in production environment.
+
+-> devdependency means use only in development not in production.
+
