@@ -62,6 +62,8 @@ userSchema.methods.isPasswordCorrect = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
+// short lived
+// validate using access token
 userSchema.methods.generateAccessToken = function () {
   return jwt.sign(
     {
@@ -77,6 +79,8 @@ userSchema.methods.generateAccessToken = function () {
   );
 };
 
+// long lived
+// no need of again inputting password field if refresh token is there.
 userSchema.methods.generateRefreshToken = function () {
   return jwt.sign(
     {
